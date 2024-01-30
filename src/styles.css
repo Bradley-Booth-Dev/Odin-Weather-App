@@ -9,7 +9,7 @@ body {
 }
 
 #weather-container {
-  background: whitesmoke;
+  background: rgb(230, 216, 216);
   max-width: 400px;
   padding: 20px;
   border-radius: 15px;
@@ -70,6 +70,8 @@ button:hover {
 
 #hourly-forecast {
   margin-top: 50px;
+  margin-bottom: 10px;
+  padding-bottom: 20px;
   overflow-x: auto;
   white-space: nowrap;
   display: flex;
