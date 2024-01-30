@@ -1,3 +1,7 @@
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
 function getWeather() {
   const apiKey = "5145d8502e4bfdeecc03f3b9d762f7c3";
   const city = document.getElementById("city").value;
@@ -47,7 +51,8 @@ function displayWeather(data) {
   } else {
     const cityName = data.name;
     const temperature = Math.round(data.main.temp - 273.15); // Convert to Celsius
-    const description = data.weather[0].description;
+    const rawDescription = data.weather[0].description;
+    const description = capitalizeFirstLetter(rawDescription);
     const iconCode = data.weather[0].icon;
     const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@4x.png`;
 
